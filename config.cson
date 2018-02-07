@@ -1,0 +1,70 @@
+"*":
+  "atom-shell-commands":
+    commands: [
+      {
+        name: "javac"
+        command: "javac"
+        arguments: [
+          "-Xlint"
+          "{FileName}"
+        ]
+        matchs: [
+          "^(?<file>[\\/0-9a-zA-Z\\._\\\\:]+):(?<line>\\d+):"
+        ]
+        options:
+          cwd: "{FileDir}"
+          keymap: "ctrl-1"
+          save: true
+      }
+      {
+        name: "java"
+        command: "java"
+        arguments: [
+          "{FileNameNoExt}"
+        ]
+        options:
+          cwd: "{FileDir}"
+          keymap: "ctrl-2"
+      }
+    ]
+  core:
+    autoHideMenuBar: true
+    automaticallyUpdate: false
+    disabledPackages: [
+      "welcome"
+      "timecop"
+      "spell-check"
+      "about"
+      "autocomplete-html"
+      "autocomplete-css"
+      "autosave"
+      "language-clojure"
+      "language-csharp"
+      "language-yaml"
+      "language-xml"
+      "language-typescript"
+      "language-toml"
+      "language-sql"
+      "language-sass"
+      "language-ruby-on-rails"
+      "language-ruby"
+      "language-property-list"
+      "language-php"
+      "language-perl"
+      "language-objective-c"
+      "language-go"
+      "language-html"
+      "language-hyperlink"
+      "language-mustache"
+    ]
+    reopenProjectMenuCount: 10
+    telemetryConsent: "limited"
+  editor:
+    fontFamily: "Source Code Pro"
+    preferredLineLength: 222
+    scrollPastEnd: true
+    tabLength: 4
+    tabType: "soft"
+    zoomFontWhenCtrlScrolling: false
+  "exception-reporting":
+    userId: "9015b33d-8a25-4df8-8ca3-6399ff23d0da"
