@@ -9,7 +9,7 @@
 ## 安装atom-shell-commands
 
 ### Atom内安装
-打开Settings界面，在Install一栏下
+打开**Settings**界面，在**Install**一栏下搜索**atom-shell-commands**并安装.
 
 ### 手动安装
 从[Github](https://github.com/skywind3000/atom-shell-commands/releases)上下载文件并复制到[包目录](~/.atom/packages)下.可用命令:
