@@ -13,8 +13,8 @@
         ]
         options:
           cwd: "{FileDir}"
-          keymap: "ctrl-1"
           save: true
+          keymap: "ctrl-1"
       }
       {
         name: "java"
@@ -24,6 +24,23 @@
         ]
         options:
           cwd: "{FileDir}"
+          keymap: "ctrl-6"
+      }
+      {
+        name: "gcc"
+        command: "gcc"
+        arguments: [
+          "-Wall"
+          "{FileName}"
+          "-o"
+          "{FileNameNoExt}"
+        ]
+        matchs: [
+          "^(?<file>[\\/0-9a-zA-Z\\._\\\\:]+):(?<line>\\d+):(?<col>\\d+):"
+        ]
+        options:
+          cwd: "{FileDir}"
+          save: true
           keymap: "ctrl-2"
       }
     ]
