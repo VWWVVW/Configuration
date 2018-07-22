@@ -2,46 +2,64 @@
   "atom-shell-commands":
     commands: [
       {
-        name: "javac"
-        command: "javac"
+        command: "terminator"
+        name: "terminator"
+        options:
+          cwd: "{FileDir}"
+          keymap: "ctrl-`"
+          save: true
+      }
+      {
         arguments: [
           "-Xlint"
           "{FileName}"
         ]
+        command: "javac"
         matchs: [
           "^(?<file>[\\/0-9a-zA-Z\\._\\\\:]+):(?<line>\\d+):"
         ]
+        name: "javac"
         options:
           cwd: "{FileDir}"
-          save: true
           keymap: "ctrl-1"
+          save: true
       }
       {
-        name: "java"
-        command: "java"
         arguments: [
           "{FileNameNoExt}"
         ]
+        command: "java"
+        name: "java"
         options:
           cwd: "{FileDir}"
           keymap: "ctrl-6"
       }
       {
-        name: "gcc"
-        command: "gcc"
         arguments: [
           "-Wall"
           "{FileName}"
           "-o"
-          "{FileNameNoExt}"
+          "debugs/{FileNameNoExt}"
         ]
+        command: "gcc"
         matchs: [
           "^(?<file>[\\/0-9a-zA-Z\\._\\\\:]+):(?<line>\\d+):(?<col>\\d+):"
         ]
+        name: "gcc"
         options:
           cwd: "{FileDir}"
-          save: true
           keymap: "ctrl-2"
+          save: true
+      }
+      {
+        arguments: [
+          "-e"
+          "./debugs/{FileNameNoExt}"
+        ]
+        command: "terminator"
+        options:
+          cwd: "{FileDir}"
+          keymap: "ctrl-7"
       }
     ]
   core:
