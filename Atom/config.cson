@@ -57,9 +57,26 @@
           "./debugs/{FileNameNoExt}"
         ]
         command: "terminator"
+        name: "terminator"
         options:
           cwd: "{FileDir}"
           keymap: "ctrl-7"
+      }
+      {
+        arguments: [
+          "-Wall"
+          "{FileName}"
+          "-o"
+          "debugs/{FileNameNoExt}"
+          "-l"
+          "stdc++"
+        ]
+        command: "gcc"
+        name: "g++"
+        options:
+          cwd: "{FileDir}"
+          keymap: "ctrl-3"
+          save: true
       }
     ]
   core:
