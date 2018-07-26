@@ -53,7 +53,7 @@
       }
       {
         arguments: [
-          "-e"
+          "-x"
           "./debugs/{FileNameNoExt}"
         ]
         command: "terminator"
@@ -72,6 +72,9 @@
           "stdc++"
         ]
         command: "gcc"
+        matchs: [
+          "^(?<file>[\\/0-9a-zA-Z\\._\\\\:]+):(?<line>\\d+):(?<col>\\d+):"
+        ]
         name: "g++"
         options:
           cwd: "{FileDir}"
