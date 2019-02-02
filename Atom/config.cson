@@ -111,6 +111,7 @@
       "language-html"
       "language-hyperlink"
       "language-mustache"
+      "language-rust-bundled"
     ]
     reopenProjectMenuCount: 10
     telemetryConsent: "limited"
@@ -123,3 +124,17 @@
     zoomFontWhenCtrlScrolling: false
   "exception-reporting":
     userId: "9015b33d-8a25-4df8-8ca3-6399ff23d0da"
+  "file-icons":
+    coloured: false
+    tabPaneIcon: false
+  linter:
+    lintOnChange: false
+  "linter-clang":
+    executablePath: "gcc"
+  "linter-ui-default":
+    panelRepresents: "Entire Project"
+    showPanel: true
+    showProviderName: true
+  "status-bar": {}
+  tabs:
+    enableVcsColoring: true
