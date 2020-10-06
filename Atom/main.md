@@ -9,7 +9,7 @@ sudo pacman -S atom
 
 ## 安装插件
 #### 插件列表
-[skywind3000/atom-shell-commands](https://github.com/skywind3000/atom-shell-commands)
+[skywind3000/atom-shell-commands](https://github.com/skywind3000/atom-shell-commands)  
 [steelbrain/busy-signal](https://github.com/steelbrain/busy-signal)  
 [fileicons/file-icons](https://github.com/file-icons/atom)  
 [steelbrain/intentions](https://github.com/steelbrain/intentions)  
