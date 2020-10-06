@@ -54,7 +54,7 @@
       {
         arguments: [
           "-x"
-          "./debugs/{FileNameNoExt}"
+          "~/debugs/{FileNameNoExt}"
         ]
         command: "terminator"
         name: "terminator"
@@ -79,6 +79,27 @@
         options:
           cwd: "{FileDir}"
           keymap: "ctrl-3"
+          save: true
+      }
+      {
+        arguments: [
+          "-c"
+          "-Wall"
+          "-std=c++11"
+          "-lglfw"
+          "-lGLEW"
+          "{FileName}"
+          "-o"
+          "debugs/{FileNameNoExt}"
+        ]
+        command: "gcc"
+        matchs: [
+          "^(?<file>[\\/0-9a-zA-Z\\._\\\\:]+):(?<line>\\d+):(?<col>\\d+):"
+        ]
+        name: "C++_OpenGL"
+        options:
+          cwd: "{FileDir}"
+          keymap: "ctrl-4"
           save: true
       }
     ]
@@ -112,6 +133,7 @@
       "language-hyperlink"
       "language-mustache"
       "language-rust-bundled"
+      "linter-clang"
     ]
     reopenProjectMenuCount: 10
     telemetryConsent: "limited"
@@ -131,6 +153,8 @@
     lintOnChange: false
   "linter-clang":
     executablePath: "gcc"
+  "linter-gcc":
+    gccDefaultCppFlags: "-c -Wall -std=c++11 -lGLEW -lglfw"
   "linter-ui-default":
     panelRepresents: "Entire Project"
     showPanel: true
