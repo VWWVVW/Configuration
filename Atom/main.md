@@ -9,6 +9,7 @@ sudo pacman -S atom
 
 ## 安装插件
 #### 插件列表
+[andrew-d-jackson/atom-clang-format](https://github.com/andrew-d-jackson/atom-clang-format)  
 [skywind3000/atom-shell-commands](https://github.com/skywind3000/atom-shell-commands)  
 [steelbrain/busy-signal](https://github.com/steelbrain/busy-signal)  
 [fileicons/file-icons](https://github.com/file-icons/atom)  
