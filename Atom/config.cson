@@ -1,4 +1,13 @@
 "*":
+  "atom-beautify":
+    cpp:
+      beautify_on_save: true
+      configPath: "/usr/share/doc/uncrustify/examples/linux-indent.cfg"
+    executables:
+      uncrustify:
+        path: "/usr/bin/uncrustify"
+    general:
+      _analyticsUserId: "18cd1b2a-283a-4327-ac1f-2559e6e2c3e4"
   "atom-shell-commands":
     commands: [
       {
@@ -39,7 +48,7 @@
           "-Wall"
           "{FileName}"
           "-o"
-          "debugs/{FileNameNoExt}"
+          "./debugs/{FileNameNoExt}"
         ]
         command: "gcc"
         matchs: [
@@ -54,7 +63,7 @@
       {
         arguments: [
           "-x"
-          "~/debugs/{FileNameNoExt}"
+          "./debugs/{FileNameNoExt}"
         ]
         command: "terminator"
         name: "terminator"
@@ -67,11 +76,9 @@
           "-Wall"
           "{FileName}"
           "-o"
-          "debugs/{FileNameNoExt}"
-          "-l"
-          "stdc++"
+          "./debugs/{FileNameNoExt}"
         ]
-        command: "gcc"
+        command: "g++"
         matchs: [
           "^(?<file>[\\/0-9a-zA-Z\\._\\\\:]+):(?<line>\\d+):(?<col>\\d+):"
         ]
@@ -83,26 +90,48 @@
       }
       {
         arguments: [
-          "-c"
           "-Wall"
-          "-std=c++11"
+          "{FileName}"
+          "glad.c"
+          "-odebugs/{FileNameNoExt}"
           "-lglfw"
           "-lGLEW"
-          "{FileName}"
-          "-o"
-          "debugs/{FileNameNoExt}"
         ]
-        command: "gcc"
+        command: "g++"
         matchs: [
           "^(?<file>[\\/0-9a-zA-Z\\._\\\\:]+):(?<line>\\d+):(?<col>\\d+):"
         ]
-        name: "C++_OpenGL"
+        name: "g++_glfw_glew"
         options:
           cwd: "{FileDir}"
           keymap: "ctrl-4"
           save: true
       }
+      {
+        arguments: [
+          "-Wall"
+          "{FileName}"
+          "glad.c"
+          "-odebugs/{FileNameNoExt}"
+          "-lglfw"
+          "-ldl"
+        ]
+        command: "g++"
+        matchs: [
+          "^(?<file>[\\/0-9a-zA-Z\\._\\\\:]+):(?<line>\\d+):(?<col>\\d+):"
+        ]
+        name: "g++_glfw_glad"
+        options:
+          cwd: "{FileDir}"
+          keymap: "ctrl-5"
+          save: true
+      }
     ]
+  "clang-format":
+    fallbackStyle: "none"
+    formatCOnSave: true
+    formatCPlusPlusOnSave: true
+    formatJavaOnSave: true
   core:
     autoHideMenuBar: true
     automaticallyUpdate: false
