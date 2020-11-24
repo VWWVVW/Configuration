@@ -1,13 +1,4 @@
 "*":
-  "atom-beautify":
-    cpp:
-      beautify_on_save: true
-      configPath: "/usr/share/doc/uncrustify/examples/linux-indent.cfg"
-    executables:
-      uncrustify:
-        path: "/usr/bin/uncrustify"
-    general:
-      _analyticsUserId: "18cd1b2a-283a-4327-ac1f-2559e6e2c3e4"
   "atom-shell-commands":
     commands: [
       {
@@ -164,6 +155,9 @@
       "language-rust-bundled"
       "linter-clang"
     ]
+    packagesWithKeymapsDisabled: [
+      "clang-format"
+    ]
     reopenProjectMenuCount: 10
     telemetryConsent: "limited"
   editor:
@@ -185,6 +179,7 @@
   "linter-gcc":
     gccDefaultCppFlags: "-c -Wall -std=c++11 -lGLEW -lglfw"
   "linter-ui-default":
+    alwaysTakeMinimumSpace: true
     panelRepresents: "Entire Project"
     showPanel: true
     showProviderName: true
