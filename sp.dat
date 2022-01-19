@@ -1,0 +1,65 @@
+# 该文件适用于 Linux/fcitx5/fcitx5-chinese-addons/双拼/自定义
+
+# 设置好使用自定义双拼后应将此文件放置于：
+# ~/.config/fcitx5/pinyin/
+# 文件名为：
+# sp.dat
+
+# 必要时，你可能需要删除此文件中的所有中文注视以确保文件功能正常
+
+
+
+[Schema]
+# 自用双拼方案（以国标为模板）
+Name=GuoBiao_Modified
+
+[LinShengMu]
+=
+
+[ShengMu]
+# 双拼编码就是它本身的声母不必列出
+ch=I
+sh=U
+zh=V
+
+[YunMu]
+# 双拼编码就是它本身的韵母不必列出
+ai=K
+an=F
+ang=G
+ao=C
+ei=B
+en=R
+eng=H
+ia=Q
+ian=D
+iang=N
+iao=M
+ie=T
+in=L
+ing=J
+iong=S
+iu=Y
+ong=S
+ou=P
+ua=Q
+uai=Y
+uan=W
+uang=N
+ue=X
+ui=V
+un=Z
+ve=X
+uo=O
+
+[YinJie]
+# 其他特殊音节标记
+ai=AI
+an=AN
+ang=ag
+ao=AO
+ei=EI
+en=EN
+eng=EH
+er=ER
+ou=OU
