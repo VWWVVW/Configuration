@@ -77,6 +77,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 export PATH=/opt/cocos2d-x/tools/cocos2d-console/bin:/opt/cocos2d-x/tools/cocos2d-console/plugins/plugin_package:${PATH}
 alias downgrade='sudo DOWNGRADE_FROM_ALA=1 downgrade'
 alias ls='ls -ah'
+alias updHosts='~/Codes/updHosts.sh'
 HISTFILE=~/.histfile
 HISTSIZE=111
 SAVEHIST=222
@@ -89,6 +90,7 @@ compinit
 promptinit
 
 # PROMPT='@%2d> '
+PROMPT='%d'
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
