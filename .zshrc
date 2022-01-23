@@ -8,7 +8,8 @@ ZSH=/usr/share/oh-my-zsh/
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="edi"
+# ZSH_THEME="robbyrussell"
 # ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
@@ -77,7 +78,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 export PATH=/opt/cocos2d-x/tools/cocos2d-console/bin:/opt/cocos2d-x/tools/cocos2d-console/plugins/plugin_package:${PATH}
 alias downgrade='sudo DOWNGRADE_FROM_ALA=1 downgrade'
 alias ls='ls -ah'
-alias updHosts='~/Codes/updHosts.sh'
+alias updHosts='~/Codes/Scripts/updHosts.sh'
 HISTFILE=~/.histfile
 HISTSIZE=111
 SAVEHIST=222
