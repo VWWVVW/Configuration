@@ -15,8 +15,8 @@
 # source ~/.zshrc
 # to enable it immediatly
 
-local ret_status="%(?:%{$fg_bold[green]%}> :%{$fg_bold[red]%}> )"
-PROMPT='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
+local ret_status="%(?:%{$fg_bold[green]%}>:%{$fg_bold[red]%}>)"
+PROMPT='${ret_status} $(git_prompt_info)%{$fg[cyan]%}%c %{$reset_color%}'
 RPROMPT='%~'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
