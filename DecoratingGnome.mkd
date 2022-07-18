@@ -1,0 +1,49 @@
+# Decorating Gnome
+## Widget & Extensions
+How to install gnome extensions:
+1. Install browser extensions, enter [gnome extension official website](extensions.gnome.org), and use the tip above the page to install a browser extension that suits it.
+2. Install native host connector, for Manjaro Linux, use the command below:
+```bash
+sudo pacman -S gnome-browser-connector
+```
+3. Open [gnome extension official website](extensions.gnome.org), search for the one you prefer, turn the button on on the specific page to install it.
+### For Top Bar
+* `Applications Menu`: To balance the white space in top bar.
+* `Clear Top Bar` and `Transparent Top Bar`: Make top bar transparent when necessary.
+* `Tray Icons: Reloaded`: Provide tray icon port.
+### For Dock (Only Available on Xorg)
+* Install `plank` in your system, in Manjaro, use the command below:
+  ```bash
+  sudo pacman -S plank
+  ```
+* Install gnome ext `Dash to Plank`.
+* Install gnome ext `Compiz alike magic lamp effect` for better animation when window appears and disappears.
+### For Others
+* `Tiling Assistant`: Improve your experience when tiling windows.
+* `Removable Drive Menu`: Might be useful. Just enable it because it's pre-installed.
+* `Extension List`: To better organize your gnome exts.
+### For Touchpad Gestures
+* `X11 Gestures`: You might get a more detailed explanation below.
+### For User Themes
+* `User Themes`: You can just enable it because generally speaking it's pre-installed.
+## Look & Feel
+* Install `whitesur-gtk-theme-git`, you can either install from the [source code](https://github.com/vinceliuice/WhiteSur-gtk-theme), or when using Archlinux based linux distro install with command line:
+  ```bash
+  yay whitesur-gtk-theme-git # Replace yay with other AUR helper you prefer
+  ```
+* Enable it in app **Tweaks** in catagory **Appearance**, remember to modify both **Shell** and **Legacy Applications**, I'd like to use *whitesur-dark-green*.
+* Btw, the author of this theme make other mac-like themes, you can check it out on [his github repos](https://github.com/vinceliuice/).
+## Touchpad & Gesture
+* If you're using **Gnome (On Wayland)** instead of **Gnome On Xorg** then skip to the next step. Install gnome ext`X11 Gestures` (see details above), along with app **touchegg** and its gui client **touche** (you can find both of them in official repo of Archlinux).
+  Btw, **touche** and **touchegg** provide some other very fancy features you should use that are also available on other wms.
+* First make sure you have installed `xf86-input-synaptics` and `xf86-input-libinput`, then enable 1-finger-click and 2-finger-click feature: create a sh file with the contents:
+  ```bash
+  #!/bin/bash
+  synclient \
+	TapButton1=1 \ # 1-finger-click for left mouse click
+	TapButton2=3 \ # 2-finger-click for right mouse click
+  ;
+  ```
+  Make it executable, and move it to the folder `~/.config/autostart/`, so that the setting won't be overrided by gnome.
+  Btw, this command/file is also useful in other wms.
+## Others
