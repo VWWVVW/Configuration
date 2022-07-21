@@ -34,7 +34,10 @@ sudo pacman -S gnome-browser-connector
 * Enable it in app **Tweaks** in catagory **Appearance**, remember to modify both **Shell** and **Legacy Applications**, I'd like to use *whitesur-dark-green*.
 * Btw, the author of this theme make other mac-like themes, you can check it out on [his github repos](https://github.com/vinceliuice/).
 ## Touchpad & Gesture
-* If you're using **Gnome (On Wayland)** instead of **Gnome On Xorg** then skip to the next step. Install gnome ext`X11 Gestures` (see details above), along with app **touchegg** and its gui client **touche** (you can find both of them in official repo of Archlinux).
+* If you're using **Gnome (On Wayland)** instead of **Gnome On Xorg** then skip to the next step. Install gnome ext`X11 Gestures` (see details above), along with app **touchegg** and its gui client **touche** (you can find both of them in official repo of Archlinux). Remember to enable its service after installing using command:
+  ```bash
+  sudo systemctl enable --now touchegg
+  ```
   Btw, **touche** and **touchegg** provide some other very fancy features you should use that are also available on other wms.
 * First make sure you have installed `xf86-input-synaptics` and `xf86-input-libinput`, then enable 1-finger-click and 2-finger-click feature: create a sh file with the contents:
   ```bash
@@ -47,3 +50,10 @@ sudo pacman -S gnome-browser-connector
   Make it executable, and move it to the folder `~/.config/autostart/`, so that the setting won't be overrided by gnome.
   Btw, this command/file is also useful in other wms.
 ## Others
+### How To Start Gnome from cmd
+1. Install `gdm`.
+2. Using cmd:
+   ```bash
+   systemctl start gdm.service
+   ```
+   Mind that you can log out to cmd interface like that one in `xfce4`.
